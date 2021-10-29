@@ -24,7 +24,7 @@ public class Triangle {
             S = Math.sqrt(P * (P - a) * (P - b) * (P - c));
             System.out.println("Area: " + S);
 
-            if(a == b &&  b == c && a == c){
+            if(a == b && a == c){
               System.out.println("Triangle: equilateral");
               break;
             } else if(a == b && a != c){

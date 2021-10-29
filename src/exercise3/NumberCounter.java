@@ -11,7 +11,7 @@ public class NumberCounter {
         int positive = 0;
         int negative = 0;
         int sum = 0;
-        int average = 0;
+        double average = 0;
 
 
         while(n != 0){
