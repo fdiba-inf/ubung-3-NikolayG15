@@ -1,36 +1,28 @@
 package exercise3;
 
 import java.util.Scanner;
-import java.lang.Math;
 
 public class AngleCalculation {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
-        int winkel = input.nextInt();
-        char ch = input.next().charAt(0);
-        double Radiant;
-        double Grad;
-        double Pi = Math.PI;
-
+        double angle;
+        char ch;
+        double radians;
+        double degrees;
         do {
-          if(ch == 'r'){
-              Radiant = (winkel*Pi ) / 180;
-              System.out.println("Angle: " + Radiant + ch);
-          } else {
-              Grad = (winkel * 180) / Pi;
-              System.out.println("Angle: " + Grad + ch);
-          }
-
+          angle = input.nextDouble();
           ch = input.next().charAt(0);
-
-        } while((ch == 'r') || (ch == 'd'));
-
-        
-
-
-
+         if (ch == 'r') {
+           radians = angle;
+           degrees = (180*radians)/Math.PI;
+           System.out.println("Angle: " + degrees + "d");
+         } else if (ch == 'd') {
+           degrees = angle;
+           radians = (Math.PI*degrees)/180;
+           System.out.println("Angle: " + radians + "r");
+         }
+          
+        } while(ch == 'r' || ch == 'd');
     }
-
 }
