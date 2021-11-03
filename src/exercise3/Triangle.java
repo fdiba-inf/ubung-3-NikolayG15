@@ -8,18 +8,24 @@ public class Triangle {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int a = input.nextInt();
-        int b = input.nextInt();
-        int c = input.nextInt();
+        double a;
+        double b;
+        double c;
         double P;
         double S;
 
-        if(a < 0 || b < 0 || c < 0 || (a + b <= c) || (a + c <= b) || (b + c <= a)) {
+      
+          do {
+            a = input.nextInt();
+            b = input.nextInt();
+            c = input.nextInt();
+
+            if(a < 0 || b < 0 || c < 0 || (a + b <= c) || (a + c <= b) || (b + c <= a)) {
           System.out.println("Values are not correct!");
 
         } else {
 
-          do {
+
             P = (a + b + c) / 2;
             S = Math.sqrt(P * (P - a) * (P - b) * (P - c));
             System.out.println("Area: " + S);
@@ -33,7 +39,7 @@ public class Triangle {
             } else if(a == c && a != b){
               System.out.println("Triangle: isosceles ");
               break;
-            } else if(b == c && b != a){
+            } else if(c == b && c != a){
               System.out.println("Triangle: isosceles ");
               break;
             } else {
@@ -42,10 +48,12 @@ public class Triangle {
             }
               
           }
+          
 
-           while(a > 0 && b > 0 && c > 0);
-        }
-        
+
+    }while(a > 0 && b > 0 && c > 0);
+          
+    
     }
 }
 
